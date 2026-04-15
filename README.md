@@ -50,6 +50,7 @@ La table créée automatiquement est `conchyliculture` avec les colonnes :
 - `commune`
 - `espece`
 - `tonnes`
+- 
 Vous accéder à la base de données avec le jupyter Lecture de la base
 
 
