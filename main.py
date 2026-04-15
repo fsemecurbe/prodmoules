@@ -1,13 +1,10 @@
 from pathlib import Path
-
 import duckdb
 from fastapi import FastAPI, HTTPException
 
 DB_PATH = Path(__file__).parent / "prodmoules.duckdb"
 
-
 app = FastAPI(title="Producteurs de moules", version="0.1")
-
 
 def get_db():
     return duckdb.connect(database=str(DB_PATH), read_only=False)
