@@ -1,5 +1,5 @@
 import duckdb
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 
 def init_db():
     conn = duckdb.connect(database="production_conchylicole.duckdb", read_only=False)
