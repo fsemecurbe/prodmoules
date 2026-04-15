@@ -29,16 +29,13 @@ def init_db():
     )
     conn.close()
 
-
 @app.on_event("startup")
 def startup():
     init_db()
 
-
 @app.get("/")
 def read_root():
     return {"message": "API Producteurs de moules", "version": "0.1"}
-
 
 @app.post("/producersin")
 def create_producer(siret: str = "123456789", commune: str = "29019", products: str = "Moules de bouchot", tonnes: float = 1000.0):
