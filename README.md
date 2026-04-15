@@ -22,15 +22,8 @@ Lancez le serveur en développement :
 uvicorn main:app --reload
 ```
 
+Un nouvel onglet doit s'ouvrir, vous pouvez y aller et rajouter /docs pour obtenir le swagger et commencer à envoyer des productions.
 
-
-
-Un nouvel onglet doit s'ouvrir, vous pouvez y aller et rajouter /docs pour obtenir le swagger
-
-
-
-
-Ajoute un enregistrement de production conchylicole dans la base DuckDB.
 
 Les paramètres sont envoyés en tant que paramètres de requête POST standard.
 
@@ -42,7 +35,7 @@ Les paramètres sont envoyés en tant que paramètres de requête POST standard.
 
 ## Base de données
 
-Le fichier DuckDB utilisé est `production_conchylicole.duckdb`.
+Le fichier DuckDB utilisé est `production_conchylicole.duckdb`. Il est créé lorsque l'on lance l'application.
 
 La table créée automatiquement est `conchyliculture` avec les colonnes :
 
@@ -52,9 +45,3 @@ La table créée automatiquement est `conchyliculture` avec les colonnes :
 - `tonnes`
 - 
 Vous accéder à la base de données avec le jupyter Lecture de la base
-
-
-## Notes
-
-- Le schéma est créé automatiquement au démarrage.
-- DuckDB persiste les données dans le fichier `.duckdb`.
