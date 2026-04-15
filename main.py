@@ -1,10 +1,7 @@
-from datetime import datetime
 from pathlib import Path
-from typing import List, Optional
 
 import duckdb
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, EmailStr, Field
 
 DB_PATH = Path(__file__).parent / "prodmoules.duckdb"
 
