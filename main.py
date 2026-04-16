@@ -21,6 +21,6 @@ def create_producer(siret: str = "123456789", commune: str = "29019", espece: st
     conn = duckdb.connect(database="production_conchylicole.duckdb", read_only=False)
     query = f"INSERT INTO conchyliculture (siret, commune, espece, tonnes) VALUES (?, ?, ?, ?)"
     conn.execute(query, (siret, commune, espece, tonnes))
-    logger.info(conn.execute('select * from conchyliculture'))
+    logger.info('test')
     conn.close()
     return {"message": f"Merci pour votre dépot de données siret : {siret}"}
